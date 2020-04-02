@@ -1,0 +1,60 @@
+.weather-container {
+    padding         : 30px;
+    border-radius   : 20px 0 0 20px;
+    background-color: #1A1F24;
+    color           : #fff !important;
+    min-height      : 700px;
+}
+
+.weather-container .form-control {
+    color           : #fff;
+    background-color: #1a1f24;
+    outline         : none;
+}
+
+.card {
+    border          : none;
+    background-color: #1A1F24;
+}
+
+.card-title {
+    letter-spacing: 6px;
+}
+
+.card-body .media {
+    position: relative;
+    left    : 23%;
+}
+
+.card-body .temp-box .temp {
+    font-size  : 7em;
+    font-weight: 100;
+    line-height: 100%;
+    padding    : 20px 0;
+}
+
+.card-body .temp-box .temp .temp-unit {
+    font-size   : 28px;
+    position    : absolute;
+    padding-left: 5px;
+    top         : 65px;
+}
+
+.round-card {
+    border-radius: 20px;
+    border       : 2px solid black;
+}
+
+.f-med {
+    font-size: 18px;
+}
+
+.f-small {
+    font-size: 14px;
+}
+
+.form-control:focus, .form-control:active {
+   box-shadow: none;
+   outline: none;
+   border: 1px solid #ced4da;
+}
