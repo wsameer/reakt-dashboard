@@ -11,7 +11,7 @@ const floatLeft = {
 function WeatherDetails(props) {
   return (
     <div className="weather-details p-2">
-      <img src={`./assets/${props.icon}`} alt="" style={floatLeft} />
+      <img src={props.iconPath} alt="" style={floatLeft} />
       <div>
         <p className="mb-0">{props.title}</p>
         <p>{props.value}</p>
@@ -23,7 +23,7 @@ function WeatherDetails(props) {
 WeatherDetails.propTypes = {
   title: PropTypes.string,
   value: PropTypes.any,
-  icon: PropTypes.string,
+  iconPath: PropTypes.string,
   style: PropTypes.object,
 }
 
