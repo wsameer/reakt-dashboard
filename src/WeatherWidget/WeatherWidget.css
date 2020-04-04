@@ -21,22 +21,35 @@
     letter-spacing: 6px;
 }
 
+.card-subtitle {
+    letter-spacing: 0.5px;
+}
+
 .card-body .media {
     position: relative;
 }
 
 .card-body .temp-box .temp {
+    padding: 25px 0;
+}
+
+.card-body .temp-box .temp .main {
     font-size  : 7em;
     font-weight: 100;
     line-height: 100%;
-    padding    : 20px 0;
+}
+
+.card-body .temp-box .temp .min {
+    font-size: 24px;
+    margin-top: 45px;
+    opacity: 0.6;
 }
 
 .card-body .temp-box .temp .temp-unit {
     font-size   : 28px;
     position    : absolute;
     padding-left: 5px;
-    top         : 65px;
+    top         : 105px;
 }
 
 .round-card {
