@@ -1,0 +1,60 @@
+.todo-wrapper .card-title {
+  color         : #fff;
+  letter-spacing: normal;
+}
+
+.todo-wrapper .card-body {
+  color: #fff;
+}
+
+.todo-wrapper .card-body .mild {
+  opacity: 0.6;
+}
+
+.todo-wrapper .card-body .form-control {
+  color           : #fff;
+  background-color: #1a1f24;
+  border          : 1px solid #3b4248;
+  border-radius   : 8px 0 0 8px;
+  opacity: 0.8;
+}
+
+.list-group-flush .list-group-item {
+  background   : #252B32;
+  color        : #fff;
+  opacity      : 0.87;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+
+.list-group-flush .list-group-item small {
+  opacity: 0.6;
+}
+
+.list-group-flush .list-group-item .desc {
+  line-height: normal;
+  width      : 90%;
+  text-align : justify;
+}
+
+.list-group-flush .list-group-item .btn-no-bg {
+  background: transparent;
+  padding   : .375rem 0;
+}
+
+.list-group-flush .list-group-item .btn-no-bg:focus,
+.list-group-flush .list-group-item .btn-no-bg:active {
+  outline   : none;
+  border    : transparent;
+  box-shadow: none;
+}
+
+.form-check {
+  position    : absolute;
+  padding-left: 1.25rem;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  height: 35px;
+}

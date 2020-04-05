@@ -1,0 +1,16 @@
+{
+  "todos": [
+    {
+      "description": "Pay the credit card bill",
+      "createdTime": 1586064802985,
+      "completed": false,
+      "completedTime": null
+    },
+    {
+      "description": "Wash the car",
+      "createdTime": 1586064802941,
+      "completed": false,
+      "completedTime": null
+    }
+  ]
+}

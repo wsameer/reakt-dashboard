@@ -1,7 +1,7 @@
 import React from 'react'
 import './App.css'
-import WeatherWidget from './WeatherWidget/WeatherWidget'
-import RandomList from './Components/RandomList/RandomList.js'
+import WeatherWidget from './Components/WeatherWidget/WeatherWidget'
+import TodoList from './Components/TodoList/TodoList';
 
 function App() {
   return (
@@ -11,8 +11,10 @@ function App() {
           <div className="col-sm-4 p-0 left-side">
             <WeatherWidget />
           </div>
-          <div className="col-sm-8 p-0 right-side">
-            <RandomList />
+          <div className="col-sm-8 right-side components">
+            <div className="col-sm-6 p-0">
+              <TodoList />
+            </div>
           </div>
         </div>
       </div>
