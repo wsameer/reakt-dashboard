@@ -1,7 +1,8 @@
 import React from 'react'
 import './App.css'
 import WeatherWidget from './Components/WeatherWidget/WeatherWidget'
-import TodoList from './Components/TodoList/TodoList';
+import TodoList from './Components/TodoList/TodoList'
+import Football from './Components/Football/Football'
 
 function App() {
   return (
@@ -11,9 +12,12 @@ function App() {
           <div className="col-sm-4 p-0 left-side">
             <WeatherWidget />
           </div>
-          <div className="col-sm-8 right-side components">
-            <div className="col-sm-6 p-0">
+          <div className="row col-sm-8 right-side components">
+            <div className="col-sm pl-0">
               <TodoList />
+            </div>
+            <div className="col-sm pr-0">
+              <Football />
             </div>
           </div>
         </div>

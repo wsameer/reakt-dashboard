@@ -83,7 +83,7 @@ const WeatherWidget = () => {
           query={query}
         />
 
-        <div className="card">
+        <div className="card weather-card">
           {(typeof weatherData.main == 'undefined') ? ('') : (
             <div className="card-body">
               <div className="media text-center">

@@ -4,9 +4,9 @@ import PropTypes from 'prop-types'
 const WeatherDetails = props => {
   return (
     <div className="weather-details p-2">
-      <img 
-        src={props.iconPath} 
-        alt="appropriate-logo.png" 
+      <img
+        src={props.iconPath}
+        alt="appropriate-logo.png"
       />
       <div>
         <p className="mb-0">{props.title}</p>

@@ -1,3 +1,7 @@
+.todo-wrapper {
+  border-radius: 20px;
+}
+
 .todo-wrapper .card-title {
   color         : #fff;
   letter-spacing: normal;

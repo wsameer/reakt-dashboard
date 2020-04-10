@@ -1,0 +1,41 @@
+.football-container {
+  color     : #fff;
+  max-height: 580px;
+  overflow-y: overlay;
+  margin    : 15px 0;
+}
+
+.football-container .card-title {
+  color         : #fff;
+  letter-spacing: normal;
+  margin-top    : -15px;
+}
+
+.football-container .white-table {
+  color    : #fff;
+  font-size: 14px;
+}
+
+.table td .long {
+  line-height: 1px;
+}
+
+.table td .badge {
+  display       : inline-block;
+  vertical-align: middle;
+  margin-right  : 5px;
+}
+
+.table .pleft-4 {
+  padding-left: 44px;
+}
+
+.badge-image-container .badge-image--25 {
+  width         : 20px;
+  height        : 20px;
+  vertical-align: middle;
+}
+
+.table .no-right-padding {
+  padding-right: 0 !important;
+}

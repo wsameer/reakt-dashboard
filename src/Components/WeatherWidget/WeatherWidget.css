@@ -1,5 +1,6 @@
 .weather-container {
     padding         : 30px;
+    padding-right   : 45px;
     border-radius   : 20px 0 0 20px;
     background-color: #1A1F24;
     color           : #fff !important;
@@ -16,6 +17,7 @@
 .card {
     border          : none;
     background-color: #1A1F24;
+    border-radius   : 20px;
 }
 
 .card-title {
@@ -74,7 +76,7 @@
 }
 
 .weather-details img {
-    float: left;
+    float : left;
     margin: 10px 15px;
     color : #fff;
     height: 25px;
