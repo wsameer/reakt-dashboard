@@ -4,7 +4,7 @@ import WeatherDetails from './WeatherDetails';
 import SearchWeather from './SearchWeather';
 
 const WEATHER_API = {
-  key: "b3966a87a8b7d22cccd1386b3d791c1d",
+  key: process.env.REACT_APP_OPEN_WEATHER_API_KEY,
   base: "https://api.openweathermap.org/data/2.5/"
 };
 
