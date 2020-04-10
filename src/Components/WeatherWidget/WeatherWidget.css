@@ -72,3 +72,10 @@
     outline   : none;
     border    : 1px solid #ced4da;
 }
+
+.weather-details img {
+    float: left;
+    margin: 10px 15px;
+    color : #fff;
+    height: 25px;
+}

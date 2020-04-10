@@ -1,8 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+
 const DELETE_ICON = require('../../assets/icons8-trash-can.svg')
 
-function TodoItem(props) {
+const TodoItem = props => {
   const convertTime = (t) => {
     const d = new Date(t);
     let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
@@ -47,3 +48,4 @@ TodoItem.propTypes = {
 }
 
 export default TodoItem
+

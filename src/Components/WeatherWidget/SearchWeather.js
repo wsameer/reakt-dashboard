@@ -1,9 +1,11 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
-function SearchWeather({ onQueryChange, getWeatherData, query }) {
+const SearchWeather = (props) => {
   const keyPressEvent = (event) => {
-    if (event.keyCode === 13 && query.length > 3) {
-      getWeatherData();
+    event.preventDefault();
+    if (event.keyCode === 13 && props.query.length > 3) {
+      props.getWeatherData();
     }
   }
 
@@ -14,12 +16,18 @@ function SearchWeather({ onQueryChange, getWeatherData, query }) {
         className="form-control form-control-lg"
         placeholder="Search for a city..."
         aria-describedby="emailHelp"
-        onChange={onQueryChange}
-        value={query}
+        onChange={props.onQueryChange}
+        value={props.query}
         onKeyUp={keyPressEvent}
       />
     </div>
   )
+}
+
+SearchWeather.propTypes = {
+  query: PropTypes.string,
+  getWeatherData: PropTypes.func,
+  onQueryChange: PropTypes.func
 }
 
 export default SearchWeather

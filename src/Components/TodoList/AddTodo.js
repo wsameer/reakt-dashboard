@@ -1,14 +1,14 @@
 import React, { useState } from 'react'
 
-function AddTodo(props) {
-  
+const AddTodo = (props) => {
+
   const [newTodo, setnewTodo] = useState('')
 
   const handleAddTodo = e => {
     if (newTodo === '') {
       return;
     }
-    props.addNewTodo(newTodo); 
+    props.addNewTodo(newTodo);
     setnewTodo('');
   }
 

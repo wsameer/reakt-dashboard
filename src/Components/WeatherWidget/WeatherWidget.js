@@ -15,7 +15,7 @@ const WEATHER_ICONS = {
   pressure: require('../../assets/icons8-atmospheric-pressure-50.png')
 };
 
-function WeatherWidget() {
+const WeatherWidget = () => {
   const [query, setQuery] = useState('');
   const [weatherData, setWeatherData] = useState({});
   const [currentTime, setCurrentTime] = useState(new Date().toLocaleTimeString());
@@ -42,10 +42,8 @@ function WeatherWidget() {
         if (result.cod !== 200) {
           return handleApiError(result.message);
         }
-        // console.log(result);
         setQuery('');
         setWeatherData(result);
-        // setWeatherData({ "coord": { "lon": 73.86, "lat": 18.52 }, "weather": [{ "id": 801, "main": "Clouds", "description": "few clouds", "icon": "02n" }], "base": "stations", "main": { "temp": 27.39, "feels_like": 26.89, "temp_min": 27.39, "temp_max": 27.39, "pressure": 1012, "humidity": 34, "sea_level": 1012, "grnd_level": 950 }, "wind": { "speed": 0.83, "deg": 359 }, "clouds": { "all": 12 }, "dt": 1585587376, "sys": { "country": "IN", "sunrise": 1585530008, "sunset": 1585574252 }, "timezone": 19800, "id": 1259229, "name": "Pune", "cod": 200 });
       });
   }
 
@@ -111,15 +109,6 @@ function WeatherWidget() {
                     alt="" />
                   {weatherData.weather[0].main}
                 </div>
-
-                {/* <div className="row mt-2 f-small hidden">
-                  <div className="col-sm-6 text-right">
-                    <span>Feels like {Math.round(weatherData.main.feels_like)} °C</span>
-                  </div>
-                  <div className="col-sm-6 text-left">
-                    <span>Sunset {}</span>
-                  </div>
-                </div> */}
               </div>
 
               <div className="row mt-4 f-small">
@@ -165,6 +154,6 @@ function WeatherWidget() {
       </main>
     </div>
   )
-}
+};
 
 export default WeatherWidget
