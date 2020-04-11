@@ -30,7 +30,7 @@ export class Football extends Component {
 
     // fetch(FOOTBALL_API.url, {
     //   method: 'GET',
-    //   headers: { 'X-Auth-Token': '818a1df44dc54d6284a7f872e8b8ca76' }
+    //   headers: { 'X-Auth-Token': FOOTBALL_API.key }
     // })
     //   .then(res => res.json())
     //   .then(response => {
@@ -55,7 +55,7 @@ export class Football extends Component {
 
   render() {
 
-    const plData = this.state.standings.map((club) =>
+    const tableRows = this.state.standings.map((club) =>
       <tr key={club.team.id}>
         <th className="no-right-padding" scope="row">{club.position}</th>
         <td>
@@ -83,7 +83,7 @@ export class Football extends Component {
           <div className="card-body">
             <h5 className="pl-2 card-title">Premier League (2019-20)</h5>
             {(this.loading === true) ? ('') : (
-              <table className="table table-borderless white-table">
+              <table className="table table-borderless table-hover white-table">
                 <thead>
                   <tr>
                     <th scope="col">Pos</th>
@@ -96,7 +96,7 @@ export class Football extends Component {
                   </tr>
                 </thead>
                 <tbody>
-                  {plData}
+                  {tableRows}
                 </tbody>
               </table>
             )}

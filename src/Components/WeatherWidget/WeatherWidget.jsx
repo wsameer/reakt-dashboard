@@ -15,6 +15,8 @@ const WEATHER_ICONS = {
   pressure: require('../../assets/icons8-atmospheric-pressure-50.png')
 };
 
+const CityData = require('../../assets/city.list.json');
+
 const WeatherWidget = () => {
   const [query, setQuery] = useState('');
   const [weatherData, setWeatherData] = useState({});
@@ -36,7 +38,17 @@ const WeatherWidget = () => {
    * GET weather data for the user entered city
    */
   const getWeatherData = () => {
-    fetch(`${WEATHER_API.base}weather?q=${query}&units=metric&APPID=${WEATHER_API.key}`)
+    let findCity = CityData.filter(city => {
+      return ((city.name).toLowerCase() === query.toLowerCase());
+    });
+
+    if (findCity.length === 0) {
+      setQuery('');
+      setWeatherData({});
+      return handleApiError('No record found');
+    }
+
+    fetch(`${WEATHER_API.base}weather?id=${findCity[0].id}&units=metric&APPID=${WEATHER_API.key}`)
       .then(res => res.json())
       .then(result => {
         if (result.cod !== 200) {
@@ -142,7 +154,7 @@ const WeatherWidget = () => {
               <div className="col-sm mt-4 text-center">
                 <div className="card round-card">
                   <div className="card-body">
-                    This is some text within a card body.
+                    <span className="capitaliz">{weatherData.weather[0].description}</span>
                   </div>
                 </div>
               </div>

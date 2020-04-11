@@ -18,17 +18,30 @@
 .todo-wrapper .card-body .form-control {
   color           : #fff;
   background-color: #1a1f24;
-  border          : 1px solid #3b4248;
+  border          : 1px solid #121212;
   border-radius   : 8px 0 0 8px;
-  opacity: 0.8;
+  opacity         : 0.8;
+  box-shadow      : 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 3px rgba(0, 0, 0, 0.24);
+}
+
+.input-group-append .btn-outline-secondary {
+  border    : 1px solid #121212;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 3px rgba(0, 0, 0, 0.24);
+}
+
+.input-group-append .btn-outline-secondary:hover {
+  color           : #fff;
+  opacity         : 1;
+  background-color: #121212;
 }
 
 .list-group-flush .list-group-item {
-  background   : #252B32;
+  background   : #1A1F24;
   color        : #fff;
   opacity      : 0.87;
   margin-bottom: 10px;
   border-radius: 8px;
+  box-shadow   : 0 1px 3px rgba(0, 0, 0, 0.24), 0 1px 4px rgba(0, 0, 0, 0.33);
 }
 
 .list-group-flush .list-group-item small {

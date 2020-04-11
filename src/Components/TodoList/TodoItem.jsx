@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const DELETE_ICON = require('../../assets/icons8-trash-can.svg')
+const DELETE_ICON = require('../../assets/icons8-delete.svg')
 
 const TodoItem = props => {
   const convertTime = (t) => {
