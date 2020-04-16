@@ -8,7 +8,7 @@ const FOOTBALL_API = {
   url: "http://api.football-data.org/v2/competitions/2021/standings"
 };
 
-const MCKDATA = dayta;
+// const MCKDATA = dayta;
 
 export class Football extends Component {
 
