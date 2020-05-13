@@ -3,6 +3,7 @@ import './App.css'
 import WeatherWidget from './Components/WeatherWidget/WeatherWidget'
 import TodoList from './Components/TodoList/TodoList'
 import Football from './Components/Football/Football'
+import Footer from './Components/Footer'
 
 function App() {
   return (
@@ -21,14 +22,7 @@ function App() {
             </div>
           </div>
         </div>
-        <footer className="mt-5 text-muted">
-          <div className="container">
-            <p className="float-right">
-              <a href="https://www.linkedin.com/in/wsameer/" rel="noopener noreferrer" target="_blank">Follow me on Linkedin</a>
-            </p>
-            <p>This React dashboard project is © <a href="https://github.com/nevrmore" rel="noopener noreferrer" target="_blank">Sameer Waskar</a>, but please fork a branch and customize it for yourself!</p>
-          </div>
-        </footer>
+        <Footer />
       </div>
     </div>
   );
