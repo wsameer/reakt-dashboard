@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './Football.css';
-// import { dayta } from './mockData.json';
 
 const FOOTBALL_API = {
   key: process.env.REACT_APP_FOOTBALL_API_KEY,
