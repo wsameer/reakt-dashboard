@@ -1,14 +1,10 @@
 import React, { Component } from 'react'
 import './Football.css';
 
-import { dayta } from './mockData.json'
-
 const FOOTBALL_API = {
   key: process.env.REACT_APP_FOOTBALL_API_KEY,
-  url: "http://api.football-data.org/v2/competitions/2021/standings"
+  url: "https://api.football-data.org/v2/competitions/2021/standings"
 };
-
-// const MCKDATA = dayta;
 
 export class Football extends Component {
 
@@ -22,12 +18,6 @@ export class Football extends Component {
   }
 
   componentDidMount() {
-    // this.setState({
-    //   loading: false,
-    //   standings: MCKDATA,
-    //   hasErrors: false
-    // });
-
     fetch(FOOTBALL_API.url, {
       method: 'GET',
       headers: { 'X-Auth-Token': FOOTBALL_API.key }
