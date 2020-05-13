@@ -18,7 +18,7 @@ Build with:
 ## Getting Started
 1. Install dependencies
 
-  `npm install`
+  	`npm install`
 
 2. Fire up the server and watch files
 
