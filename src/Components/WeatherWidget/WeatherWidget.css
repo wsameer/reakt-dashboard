@@ -26,6 +26,19 @@
   border-radius   : 20px;
 }
 
+@media only screen and (max-width: 767px) {
+  /* phones */
+  .p-0-mob {
+    padding: 0;
+  }
+
+  .weather-container {
+    padding: 25px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+  }
+}
+
 .card-title {
   letter-spacing: 6px;
 }

@@ -89,6 +89,9 @@ const WeatherWidget = () => {
   return (
     <div className="weather-container">
       <main>
+
+        <h5 className="d-block d-md-none mb-3">Weather App</h5>
+
         <SearchWeather
           onQueryChange={onQueryChange}
           getWeatherData={getWeatherData}
@@ -97,7 +100,7 @@ const WeatherWidget = () => {
 
         <div className="card weather-card">
           {(typeof weatherData.main == 'undefined') ? ('') : (
-            <div className="card-body">
+            <div className="card-body p-0-mob">
               <div className="media text-center">
                 <div className="media-body">
                   <h5 className="card-title mt-0 city-name">{weatherData.name.toUpperCase()}</h5>

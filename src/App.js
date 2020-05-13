@@ -14,10 +14,10 @@ function App() {
             <WeatherWidget />
           </div>
           <div className="row col-sm-8 right-side components">
-            <div className="col-sm pl-0">
+            <div className="col-sm todo-main">
               <TodoList />
             </div>
-            <div className="col-sm pr-0">
+            <div className="col-sm football-main">
               <Football />
             </div>
           </div>

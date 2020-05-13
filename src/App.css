@@ -9,6 +9,35 @@
   padding         : 30px;
 }
 
+@media only screen and (min-width: 768px) {
+
+  /* tablets and desktop */
+  .todo-main {
+    padding-left: 0;
+  }
+
+  .football-main {
+    padding-right: 0;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .components {
+    border-radius: 20px;
+    padding      : 25px;
+    margin-left  : 0px;
+  }
+
+  .todo-main {
+    padding      : 0;
+    margin-bottom: 20px;
+  }
+
+  .football-main {
+    padding: 0;
+  }
+}
+
 .scrollbar {
   margin-bottom: 5px;
 }
