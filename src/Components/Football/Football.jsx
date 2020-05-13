@@ -1,17 +1,15 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import './Football.css';
-import { dayta } from './mockData.json'
+// import { dayta } from './mockData.json';
 
 const FOOTBALL_API = {
   key: process.env.REACT_APP_FOOTBALL_API_KEY,
   url: "https://api.football-data.org/v2/competitions/2021/standings"
 };
 
-const MCKDATA = dayta;
+// const MCKDATA = dayta;
 
 export class Football extends Component {
-
-
 
   constructor(props) {
     super(props);
@@ -23,31 +21,31 @@ export class Football extends Component {
   }
 
   componentDidMount() {
-    this.setState({
-      loading: false,
-      standings: MCKDATA,
-      hasErrors: false
-    });
+    // this.setState({
+    //   loading: false,
+    //   standings: MCKDATA,
+    //   hasErrors: false
+    // });
 
-    // fetch(FOOTBALL_API.url, {
-    //   method: 'GET',
-    //   headers: { 'X-Auth-Token': FOOTBALL_API.key }
-    // })
-    //   .then(res => res.json())
-    //   .then(response => {
-    //     if (response) {
-    //       let data = response.standings[0].table;
-    //       this.setState({
-    //         loading: false,
-    //         standings: data,
-    //         hasErrors: false
-    //       });
-    //     }
-    //   })
-    //   .catch((err) => {
-    //     console.log(err);
-    //     this.setState({ hasErrors: true, loading: false });
-    //   });
+    fetch(FOOTBALL_API.url, {
+      method: 'GET',
+      headers: { 'X-Auth-Token': FOOTBALL_API.key }
+    })
+      .then(res => res.json())
+      .then(response => {
+        if (response) {
+          let data = response.standings[0].table;
+          this.setState({
+            loading: false,
+            standings: data,
+            hasErrors: false
+          });
+        }
+      })
+      .catch((err) => {
+        console.log(err);
+        this.setState({ hasErrors: true, loading: false });
+      });
   }
 
   clubName = (name) => {
