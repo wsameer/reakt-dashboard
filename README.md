@@ -1,4 +1,4 @@
-# Welcome to SW-PARKING!
+# Welcome to Reakt Dashboard!
 
 A simple dashboard app consisting of 3 small **React** learner project.
 
