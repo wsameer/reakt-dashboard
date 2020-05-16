@@ -23,7 +23,7 @@ const WeatherWidget = () => {
   const [currentTime, setCurrentTime] = useState(new Date().toLocaleTimeString());
 
   useEffect(() => {
-    fetch('http://ip-api.com/json')
+    fetch('https://ipapi.co/json/')
       .then(res => res.json())
       .then(response => {
         if (response.city) {
