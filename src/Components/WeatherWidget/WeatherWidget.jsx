@@ -39,12 +39,12 @@ const WeatherWidget = () => {
   }, []);
 
   useEffect(() => {
-    return () => {
-      setInterval(() => {
-        setCurrentTime(new Date().toLocaleTimeString());
-      }, 1000);
-    }
-  });
+    const interval = setInterval(() => {
+      setCurrentTime(new Date().toLocaleTimeString());
+    });
+
+    return () => clearInterval(interval);
+  }, [setCurrentTime]);
 
   const onQueryChange = (e) => {
     if (!e) {
