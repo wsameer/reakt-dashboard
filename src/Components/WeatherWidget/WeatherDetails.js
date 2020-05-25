@@ -1,16 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const WeatherDetails = props => {
+const WeatherDetails = (props) => {
+
+  const { iconPath, title, value } = props;
+
   return (
     <div className="weather-details p-2">
       <img
-        src={props.iconPath}
+        src={iconPath}
         alt="appropriate-logo.png"
       />
       <div>
-        <p className="mb-0">{props.title}</p>
-        <p>{props.value}</p>
+        <p className="mb-0">{title}</p>
+        <p>{value}</p>
       </div>
     </div>
   )
@@ -20,7 +23,6 @@ WeatherDetails.propTypes = {
   title: PropTypes.string,
   value: PropTypes.any,
   iconPath: PropTypes.string,
-  style: PropTypes.object,
 };
 
 export default WeatherDetails;

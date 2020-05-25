@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react';
 import './WeatherWidget.css';
 import WeatherDetails from './WeatherDetails';
 import SearchWeather from './SearchWeather';
@@ -80,6 +80,7 @@ const WeatherWidget = () => {
       });
   }
 
+  // TODO
   const handleApiError = (message) => {
     console.log(message);
   };
@@ -153,26 +154,30 @@ const WeatherWidget = () => {
                     <WeatherDetails
                       title="Wind Speed"
                       value={`${weatherData.wind.speed} km/h`}
-                      iconPath={WEATHER_ICONS.wind} />
+                      iconPath={WEATHER_ICONS.wind}
+                    />
                   </div>
                   <div className="col text-left">
                     <WeatherDetails
                       title="Humidity"
                       value={`${weatherData.main.humidity} %`}
-                      iconPath={WEATHER_ICONS.humidity} />
+                      iconPath={WEATHER_ICONS.humidity}
+                    />
                   </div>
                   <div className="w-100"></div>
                   <div className="col text-left">
                     <WeatherDetails
                       title="Pressure"
                       value={weatherData.main.pressure}
-                      iconPath={WEATHER_ICONS.pressure} />
+                      iconPath={WEATHER_ICONS.pressure}
+                    />
                   </div>
                   <div className="col text-left">
                     <WeatherDetails
                       title={convertToLocalTime(weatherData.sys.sunrise)}
                       value={convertToLocalTime(weatherData.sys.sunset)}
-                      iconPath={WEATHER_ICONS.daynight} />
+                      iconPath={WEATHER_ICONS.daynight}
+                    />
                   </div>
                 </div>
 
@@ -186,10 +191,9 @@ const WeatherWidget = () => {
               </div>
             )}
         </div>
-
       </main>
     </div>
   )
 };
 
-export default WeatherWidget
+export default WeatherWidget;
