@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { todos as t } from './Todo.model.json';
 import AddTodo from './AddTodo.jsx';
-import TodoItem from './TodoItem.jsx';
+import TodoItem from './TodoItem.js';
 import './TodoList.css';
 
 const TodoList = () => {

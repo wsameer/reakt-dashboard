@@ -5,7 +5,7 @@ const AddTodo = ({ addNewTodo }) => {
 
   const [newTodo, setnewTodo] = useState('');
 
-  const handleAddTodo = e => {
+  const handleAddTodo = (e) => {
     if (newTodo === '') {
       return;
     }
