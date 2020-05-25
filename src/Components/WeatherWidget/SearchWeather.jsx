@@ -1,5 +1,5 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const SearchWeather = (props) => {
   const keyPressEvent = (event) => {
@@ -7,7 +7,7 @@ const SearchWeather = (props) => {
     if (event.keyCode === 13 && props.query.length > 3) {
       props.getWeatherData();
     }
-  }
+  };
 
   return (
     <div className="form-group search-box">
@@ -21,13 +21,13 @@ const SearchWeather = (props) => {
         onKeyUp={keyPressEvent}
       />
     </div>
-  )
-}
+  );
+};
 
 SearchWeather.propTypes = {
   query: PropTypes.string,
   getWeatherData: PropTypes.func,
   onQueryChange: PropTypes.func
-}
+};
 
-export default SearchWeather
+export default SearchWeather;

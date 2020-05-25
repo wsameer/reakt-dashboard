@@ -1,8 +1,8 @@
-import React, { useState } from 'react'
-import { todos as t } from './Todo.model.json'
-import AddTodo from './AddTodo.jsx'
-import TodoItem from './TodoItem.jsx'
-import './TodoList.css'
+import React, { useState } from 'react';
+import { todos as t } from './Todo.model.json';
+import AddTodo from './AddTodo.jsx';
+import TodoItem from './TodoItem.jsx';
+import './TodoList.css';
 
 const TodoList = () => {
   const [todos, setTodos] = useState(t);
@@ -15,20 +15,20 @@ const TodoList = () => {
       "completedTime": null
     }]
     setTodos(newTodos);
-  }
+  };
 
   const removeTodo = (index) => {
     const newTodos = [...todos];
     newTodos.splice(index, 1);
     setTodos(newTodos);
-  }
+  };
 
   const completeTodo = (index) => {
     const newTodos = [...todos];
     newTodos[index].completed = todos[index].completed === false ? true : false;
     newTodos[index].completedTime = new Date().getTime();
     setTodos(newTodos);
-  }
+  };
 
   return (
     <div className="card todo-wrapper">
@@ -52,7 +52,7 @@ const TodoList = () => {
         }
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default TodoList
+export default TodoList;

@@ -1,14 +1,17 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from 'react';
+import PropTypes from 'prop-types';
 
-const DELETE_ICON = require('../../assets/icons8-delete.svg')
+const DELETE_ICON = require('../../assets/icons8-delete.svg');
 
-const TodoItem = props => {
+const TodoItem = (props) => {
+
+  const { todo, index, completeTodo, removeTodo } = props;
+
   const convertTime = (t) => {
     const d = new Date(t);
     let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
     return `${d.getDate()} ${months[d.getMonth()]}, ${d.getFullYear()}`;
-  }
+  };
 
   return (
     <li className="list-group-item">
@@ -17,14 +20,14 @@ const TodoItem = props => {
           className="form-check-input position-static"
           type="checkbox"
           name="completed"
-          checked={props.todo.completed}
-          onChange={() => props.completeTodo(props.index)}
+          checked={todo.completed}
+          onChange={() => completeTodo(index)}
         />
       </div>
       <div className="pl-4">
         <button
           className="float-right btn btn-no-bg"
-          onClick={() => props.removeTodo(props.index)}>
+          onClick={() => removeTodo(index)}>
           <img
             src={DELETE_ICON}
             alt="Delete Todo"
@@ -33,19 +36,21 @@ const TodoItem = props => {
         </button>
         <p
           className="desc m-0"
-          style={{ textDecoration: props.todo.completed ? "line-through" : "" }}>
-          {props.todo.description}
+          style={{ textDecoration: todo.completed ? "line-through" : "" }}>
+          {todo.description}
         </p>
-        <small>{convertTime(props.todo.createdTime)}</small>
+        <small>{convertTime(todo.createdTime)}</small>
       </div>
     </li>
-  )
-}
+  );
+};
 
 TodoItem.propTypes = {
-  index: PropTypes.number,
-  todo: PropTypes.object
-}
+  index: PropTypes.number.isRequired,
+  todo: PropTypes.object.isRequired,
+  completeTodo: PropTypes.func.isRequired,
+  removeTodo: PropTypes.func.isRequired
+};
 
-export default TodoItem
+export default TodoItem;
 

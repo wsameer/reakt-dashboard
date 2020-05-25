@@ -31,7 +31,7 @@ const WeatherWidget = () => {
           getWeatherData(response.city);
         }
       })
-      .catch(err => console.log(err));
+      .catch(err => handleApiError(err));
 
     return () => {
       setQuery(null);
@@ -61,9 +61,7 @@ const WeatherWidget = () => {
    */
   const getWeatherData = (city) => {
     const cityName = city ? city : query;
-    let findCity = CityData.filter(city => {
-      return ((city.name).toLowerCase() === cityName.toLowerCase());
-    });
+    let findCity = CityData.find(city => ((city.name).toLowerCase() === cityName.toLowerCase()));
 
     if (findCity.length === 0) {
       setQuery('');
@@ -71,7 +69,7 @@ const WeatherWidget = () => {
       return handleApiError('No record found');
     }
 
-    fetch(`${WEATHER_API.base}weather?id=${findCity[0].id}&units=metric&APPID=${WEATHER_API.key}`)
+    fetch(`${WEATHER_API.base}weather?id=${findCity.id}&units=metric&APPID=${WEATHER_API.key}`)
       .then(res => res.json())
       .then(result => {
         if (result.cod !== 200) {
@@ -84,7 +82,7 @@ const WeatherWidget = () => {
 
   const handleApiError = (message) => {
     console.log(message);
-  }
+  };
 
   /**
    * Format and returns todays date

@@ -1,5 +1,5 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const WeatherDetails = props => {
   return (
@@ -14,13 +14,13 @@ const WeatherDetails = props => {
       </div>
     </div>
   )
-}
+};
 
 WeatherDetails.propTypes = {
   title: PropTypes.string,
   value: PropTypes.any,
   iconPath: PropTypes.string,
   style: PropTypes.object,
-}
+};
 
-export default WeatherDetails
+export default WeatherDetails;

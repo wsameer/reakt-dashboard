@@ -1,16 +1,17 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 
-const AddTodo = (props) => {
+const AddTodo = ({ addNewTodo }) => {
 
-  const [newTodo, setnewTodo] = useState('')
+  const [newTodo, setnewTodo] = useState('');
 
   const handleAddTodo = e => {
     if (newTodo === '') {
       return;
     }
-    props.addNewTodo(newTodo);
+    addNewTodo(newTodo);
     setnewTodo('');
-  }
+  };
 
   return (
     <div className="input-group mb-3">
@@ -34,7 +35,11 @@ const AddTodo = (props) => {
         </button>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default AddTodo
+AddTodo.propTypes = {
+  addNewTodo: PropTypes.func.isRequired
+};
+
+export default AddTodo;
