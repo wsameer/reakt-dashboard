@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Football.css';
+import './Football.scss';
 import { dayta } from "../../mocks/mockData.json";
 
 const FOOTBALL_API = {
