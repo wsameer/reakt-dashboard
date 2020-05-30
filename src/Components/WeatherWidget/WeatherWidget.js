@@ -9,10 +9,10 @@ const WEATHER_API = {
 };
 
 const WEATHER_ICONS = {
-  wind: require('../../assets/icons8-wind-50.png'),
-  humidity: require('../../assets/icons8-wet-50.png'),
-  daynight: require('../../assets/icons8-day-and-night-50.png'),
-  pressure: require('../../assets/icons8-atmospheric-pressure-50.png')
+  wind: require('../../assets/images/icons8-wind-50.png'),
+  humidity: require('../../assets/images/icons8-wet-50.png'),
+  daynight: require('../../assets/images/icons8-day-and-night-50.png'),
+  pressure: require('../../assets/images/icons8-atmospheric-pressure-50.png')
 };
 
 const CityData = require('../../assets/city.list.json');
@@ -23,28 +23,20 @@ const WeatherWidget = () => {
   const [currentTime, setCurrentTime] = useState(new Date().toLocaleTimeString());
 
   useEffect(() => {
-    fetch('https://ipapi.co/json/')
-      .then(res => res.json())
-      .then(response => {
-        if (response.city) {
-          onQueryChange(response.city);
-          getWeatherData(response.city);
-        }
-      })
-      .catch(err => handleApiError(err));
+    // fetch('https://ipapi.co/json/')
+    //   .then(res => res.json())
+    //   .then(response => {
+    //     if (response.city) {
+    //       onQueryChange(response.city);
+    //       getWeatherData(response.city);
+    //     }
+    //   })
+    //   .catch(err => handleApiError(err));
 
     return () => {
       setQuery(null);
     }
   }, []);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentTime(new Date().toLocaleTimeString());
-    });
-
-    return () => clearInterval(interval);
-  }, [setCurrentTime]);
 
   const onQueryChange = (e) => {
     if (!e) {
@@ -107,6 +99,14 @@ const WeatherWidget = () => {
     let theDate = new Date(timeStamp * 1000);
     return theDate.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true });
   }
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentTime(new Date().toLocaleTimeString());
+    });
+
+    return () => clearInterval(interval);
+  }, [setCurrentTime]);
 
   return (
     <div className="weather-container">

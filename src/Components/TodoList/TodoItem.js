@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const DELETE_ICON = require('../../assets/icons8-delete.svg');
+const DELETE_ICON = require('../../assets/images/icons8-delete.svg');
 
 const TodoItem = (props) => {
 

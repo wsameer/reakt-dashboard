@@ -1,0 +1,76 @@
+/**
+ * VARIABLES
+ */
+$ebony        : #2d3035 !default;
+$black-russian: #22252a !default;
+$jade         : #00cd69 !default;
+$jade-lite    : #00cd6982 !default;
+$white        : #fff !default;
+
+$primary-color: $ebony;
+
+// Small tablets and large smartphones (landscape view)
+$screen-sm-min: 576px;
+
+// Small tablets (portrait view)
+$screen-md-min: 768px;
+
+// Tablets and small desktops
+$screen-lg-min: 992px;
+
+// Large tablets and desktops
+$screen-xl-min: 1200px;
+
+/** 
+  * MIXINS 
+  */
+// Small devices
+@mixin sm {
+  @media (min-width: #{$screen-sm-min}) {
+    @content;
+  }
+}
+
+// Medium devices
+@mixin md {
+  @media (min-width: #{$screen-md-min}) {
+    @content;
+  }
+}
+
+// Large devices
+@mixin lg {
+  @media (min-width: #{$screen-lg-min}) {
+    @content;
+  }
+}
+
+// Extra large devices
+@mixin xl {
+  @media (min-width: #{$screen-xl-min}) {
+    @content;
+  }
+}
+
+
+
+.app {
+  .round-square {
+    margin: 5%;
+  }
+
+  .left-side {}
+
+  .components {
+    background-color: #252B32;
+    border-radius   : 0 20px 20px 0px;
+    min-height      : 200px;
+    padding         : 30px;
+  }
+
+  .right-side {
+    .todo-main {}
+
+    .football-main {}
+  }
+}
