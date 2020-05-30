@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './WeatherWidget.css';
+import './WeatherWidget.scss';
 import WeatherDetails from './WeatherDetails';
 import SearchWeather from './SearchWeather';
 
