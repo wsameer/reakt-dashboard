@@ -5,36 +5,43 @@
     margin: 5%;
   }
 
+  .card {
+    background-color: $black-perl;
+  }
+
   .left-side {}
 
   .components {
     background-color: $cinder;
-    border-radius   : 0 20px 20px 0px;
+    border-radius   : 20px;
     min-height      : 200px;
-    padding         : 30px;
+    padding         : 25px;
+    margin-left     : 0px;
+    max-height      : 700px;
 
     @include md {
-      border-radius: 20px;
-      padding      : 25px;
-      margin-left  : 0px;
+      border-radius: 0 20px 20px 0;
+      min-height   : 200px;
+      padding      : 30px;
+      margin-left  : -15px;
     }
   }
 
   .right-side {
     .todo-main {
-      padding      : 0;
       margin-bottom: 20px;
+      padding      : 0;
 
-      @include sm {
-        padding-left: 0;
+      @include lg {
+        padding-right: 30px;
       }
     }
 
     .football-main {
-      padding: 0;
+      padding: 0px;
 
-      @include sm {
-        padding: 0 15px;
+      @include lg {
+        padding-right: 0;
       }
     }
   }
