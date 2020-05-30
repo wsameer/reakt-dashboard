@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import './Football.scss';
 import { dayta } from "../../mocks/mockData.json";
+import BusyIndicator from '../BusyIndicator';
 
 const FOOTBALL_API = {
   key: process.env.REACT_APP_FOOTBALL_API_KEY,
   url: "https://api.football-data.org/v2/competitions/2021/standings"
 };
 
-const MCKDATA = dayta;
+// const MCKDATA = dayta;
 
 export class Football extends Component {
 
@@ -22,33 +23,33 @@ export class Football extends Component {
   }
 
   componentDidMount() {
-    this.setState({
-      loading: false,
-      standings: MCKDATA,
-      hasErrors: false
-    });
+    // this.setState({
+    //   loading: false,
+    //   standings: MCKDATA,
+    //   hasErrors: false
+    // });
 
     this.calculateCurrentSeason();
 
-    // fetch(FOOTBALL_API.url, {
-    //   method: 'GET',
-    //   headers: { 'X-Auth-Token': FOOTBALL_API.key }
-    // })
-    //   .then(res => res.json())
-    //   .then(response => {
-    //     if (response) {
-    //       let data = response.standings[0].table;
-    //       this.setState({
-    //         loading: false,
-    //         standings: data,
-    //         hasErrors: false
-    //       });
-    //     }
-    //   })
-    //   .catch((err) => {
-    //     console.log(err);
-    //     this.setState({ hasErrors: true, loading: false });
-    //   });
+    fetch(FOOTBALL_API.url, {
+      method: 'GET',
+      headers: { 'X-Auth-Token': FOOTBALL_API.key }
+    })
+      .then(res => res.json())
+      .then(response => {
+        if (response) {
+          let data = response.standings[0].table;
+          this.setState({
+            loading: false,
+            standings: data,
+            hasErrors: false
+          });
+        }
+      })
+      .catch((err) => {
+        console.log(err);
+        this.setState({ hasErrors: true, loading: false });
+      });
   }
 
   clubName = (name) => {
@@ -97,24 +98,27 @@ export class Football extends Component {
         <div className="football-container scrollbar" id="style-1">
           <div className="card-body">
             <h5 className="pl-2 card-title">Premier League ({this.state.season})</h5>
-            {(this.loading === true) ? ('') : (
-              <table className="table table-borderless table-hover white-table">
-                <thead>
-                  <tr>
-                    <th scope="col">Pos</th>
-                    <th scope="col" className="pleft-4">Club</th>
-                    <th scope="col">P</th>
-                    <th scope="col">W</th>
-                    <th scope="col">D</th>
-                    <th scope="col">L</th>
-                    <th scope="col">Pts</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {tableRows}
-                </tbody>
-              </table>
-            )}
+            {
+              (this.loading)
+                ? <BusyIndicator />
+                : (
+                  <table className="table table-borderless table-hover white-table">
+                    <thead>
+                      <tr>
+                        <th scope="col">Pos</th>
+                        <th scope="col" className="pleft-4">Club</th>
+                        <th scope="col">P</th>
+                        <th scope="col">W</th>
+                        <th scope="col">D</th>
+                        <th scope="col">L</th>
+                        <th scope="col">Pts</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {tableRows}
+                    </tbody>
+                  </table>
+                )}
           </div>
         </div>
       </div>

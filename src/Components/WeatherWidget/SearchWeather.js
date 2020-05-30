@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const SearchWeather = (props) => {
 
-  const { query, getWeatherData, onQueryChange } = props;
+  const { query, getWeatherData, onQueryChange, disabled } = props;
 
   const keyPressEvent = (event) => {
     event.preventDefault();
@@ -15,6 +15,7 @@ const SearchWeather = (props) => {
   return (
     <div className="form-group search-box">
       <input
+        disabled={disabled}
         type="text"
         className="form-control form-control-lg"
         placeholder="Search for a city..."
@@ -29,8 +30,9 @@ const SearchWeather = (props) => {
 
 SearchWeather.propTypes = {
   query: PropTypes.string,
-  getWeatherData: PropTypes.func,
-  onQueryChange: PropTypes.func
+  getWeatherData: PropTypes.func.isRequired,
+  onQueryChange: PropTypes.func.isRequired,
+  disabled: PropTypes.bool
 };
 
 export default SearchWeather;
