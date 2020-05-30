@@ -1,0 +1,61 @@
+@import "../../assets/scss/index.scss";
+
+.card {
+  background-color: $black-perl;
+  border-radius   : 20px;
+
+  .football-container {
+    color           : #fff;
+    background-color: $black-perl;
+    max-height      : 580px;
+    overflow-y      : overlay;
+    margin          : 15px 0;
+
+    .card-body {
+      background-color: $black-perl;
+
+      .card-title {
+        color         : #fff;
+        letter-spacing: normal;
+        margin-top    : -15px;
+      }
+
+      .table.white-table {
+        color    : #fff;
+        font-size: 14px;
+      }
+
+      .table td .long {
+        line-height: 1px;
+        top        : 2px;
+        position   : relative;
+      }
+
+      .table td .badge {
+        display       : inline-block;
+        vertical-align: middle;
+        margin-right  : 5px;
+      }
+
+      .table .pleft-4 {
+        padding-left: 50px;
+      }
+
+      .badge-image-container .badge-image--25 {
+        width         : 20px;
+        height        : 20px;
+        vertical-align: middle;
+      }
+
+      .table .no-right-padding {
+        padding-right: 0 !important;
+      }
+
+      .table-hover tbody tr:hover {
+        color     : #fff;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+      }
+
+    }
+  }
+}
