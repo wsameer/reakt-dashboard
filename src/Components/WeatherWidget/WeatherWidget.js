@@ -22,22 +22,10 @@ const WeatherWidget = () => {
   const [weatherData, setWeatherData] = useState({});
   const [currentTime, setCurrentTime] = useState(new Date().toLocaleTimeString());
 
-  useEffect(() => {
-    // fetch('https://ipapi.co/json/')
-    //   .then(res => res.json())
-    //   .then(response => {
-    //     if (response.city) {
-    //       onQueryChange(response.city);
-    //       getWeatherData(response.city);
-    //     }
-    //   })
-    //   .catch(err => handleApiError(err));
-
-    return () => {
-      setQuery(null);
-    }
-  }, []);
-
+  /**
+   * Handles on query change event
+   * @param {object} e The DOM object
+   */
   const onQueryChange = (e) => {
     if (!e) {
       return false;
@@ -50,6 +38,7 @@ const WeatherWidget = () => {
 
   /**
    * GET weather data for the user entered city
+   * @param {string} city The name of the city
    */
   const getWeatherData = (city) => {
     const cityName = city ? city : query;
@@ -99,6 +88,22 @@ const WeatherWidget = () => {
     let theDate = new Date(timeStamp * 1000);
     return theDate.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true });
   }
+
+  useEffect(() => {
+    // fetch('https://ipapi.co/json/')
+    //   .then(res => res.json())
+    //   .then(response => {
+    //     if (response.city) {
+    //       onQueryChange(response.city);
+    //       getWeatherData(response.city);
+    //     }
+    //   })
+    //   .catch(err => handleApiError(err));
+
+    return () => {
+      setQuery(null);
+    }
+  }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { todos as t } from './Todo.model.json';
 import AddTodo from './AddTodo.js';
 import TodoItem from './TodoItem.js';
-import './TodoList.css';
+import './TodoList.scss';
 
 const TodoList = () => {
   const [todos, setTodos] = useState(t);

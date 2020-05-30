@@ -1,5 +1,5 @@
 import React from 'react'
-import './App.css'
+import './App.scss'
 import WeatherWidget from './Components/WeatherWidget/WeatherWidget'
 import TodoList from './Components/TodoList/TodoList'
 import Football from './Components/Football/Football'
