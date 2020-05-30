@@ -1,5 +1,9 @@
+@import "../../assets/scss/index.scss";
+
 .todo-wrapper {
-  border-radius: 20px;
+  border-radius   : 20px;
+  background-color: $black-perl;
+  border: none;
 
   .card-title {
     color         : #fff;
@@ -15,8 +19,8 @@
 
     .form-control {
       color           : #fff;
-      background-color: #1a1f24;
-      border          : 1px solid #121212;
+      background-color: $black-perl;
+      border          : 1px solid $nero;
       border-radius   : 8px 0 0 8px;
       opacity         : 0.8;
       box-shadow      : 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 3px rgba(0, 0, 0, 0.24);
@@ -26,20 +30,20 @@
 }
 
 .input-group-append .btn-outline-secondary {
-  border    : 1px solid #121212;
+  border    : 1px solid $nero;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 3px rgba(0, 0, 0, 0.24);
 
   &:hover {
     color           : #fff;
     opacity         : 1;
-    background-color: #121212;
+    background-color: $nero;
   }
 
 }
 
 .list-group-flush {
   .list-group-item {
-    background   : #1A1F24;
+    background   : $black-perl;
     color        : #fff;
     opacity      : 0.87;
     margin-bottom: 10px;
