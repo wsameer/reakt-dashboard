@@ -34,10 +34,16 @@ const TodoList = () => {
     setTodos(newTodos);
   };
 
+  const deleteAllTodos = () => {
+    setTodos((prev) => prev.length = 0);
+  };
+
   return (
     <div className="card todo-wrapper">
       <div className="card-body">
         <h5 className="card-title mb-3">Todays Tasks</h5>
+
+        {todos.length && <DeleteTodo deleteAllTodos={deleteAllTodos} />}
 
         <AddTodo addNewTodo={addNewTodo} />
 
