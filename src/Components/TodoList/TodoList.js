@@ -3,18 +3,22 @@ import { todos as t } from './Todo.model.json';
 import AddTodo from './AddTodo.js';
 import TodoItem from './TodoItem.js';
 import './TodoList.scss';
+import DeleteTodo from './DeleteTodo';
 
 const TodoList = () => {
   const [todos, setTodos] = useState(t);
 
   const addNewTodo = (newTodo) => {
-    const newTodos = [...todos, {
+    const newItem = {
       "description": newTodo,
       "createdTime": new Date().getTime(),
       "completed": false,
       "completedTime": null
-    }]
-    setTodos(newTodos);
+    };
+
+    setTodos((prevTodos) => {
+      return prevTodos.length ? [...prevTodos, newItem] : [newItem]
+    });
   };
 
   const removeTodo = (index) => {
@@ -34,6 +38,7 @@ const TodoList = () => {
     <div className="card todo-wrapper">
       <div className="card-body">
         <h5 className="card-title mb-3">Todays Tasks</h5>
+
         <AddTodo addNewTodo={addNewTodo} />
 
         {(!todos || todos.length === 0)
