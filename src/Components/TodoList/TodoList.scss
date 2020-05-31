@@ -4,13 +4,29 @@
   border-radius: 20px;
   border       : none;
 
-  .card-title {
-    color         : #fff;
-    letter-spacing: normal;
-  }
-
   .card-body {
     color: #fff;
+
+    .card-title {
+      color         : #fff;
+      letter-spacing: normal;
+      display       : inline;
+    }
+
+
+    .btn-delete {
+      padding: 0 0 10px 0;
+
+      &:active,
+      &:focus {
+        box-shadow: none;
+      }
+
+      img {
+        height: 24px;
+        width : 24px;
+      }
+    }
 
     .mild {
       opacity: 0.6;
