@@ -1,11 +1,29 @@
 /**
  * VARIABLES
  */
+
+// Dark
 $cinder    : #252B32 !default;
 $black-perl: #1A1F24 !default;
 $nero      : #121212 !default;
 
+$grey-one  : #E0E0E0 !default;
+$grey-two  : #F5F5F5 !default;
+$grey-three: #FAFAFA !default;
+
 $primary-color: $cinder;
+
+$bg--dark       : $nero;
+$bg--2--dark    : $cinder;
+$bg--card--dark : $black-perl;
+$text--dark     : #fff;
+// $hover--dark:
+// $border--dark:
+
+$bg--light      : $grey-one;
+$bg--2--light   : $grey-two;
+$bg--card--light: $grey-three;
+$text--light    : #000;
 
 // Small tablets and large smartphones (landscape view)
 $screen-sm-min: 576px;
