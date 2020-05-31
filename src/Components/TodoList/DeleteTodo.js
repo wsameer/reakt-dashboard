@@ -5,7 +5,7 @@ const deleteIcon = require('../../assets/images/icons8-delete-view-50.png');
 
 const DeleteTodo = ({ deleteAllTodos }) => {
   return (
-    <button className="btn btn-delete float-right"
+    <button title="delete all" className="btn btn-delete float-right"
       onClick={deleteAllTodos}>
       <img src={deleteIcon} alt="" />
     </button>

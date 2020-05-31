@@ -9,14 +9,14 @@ const Layout = (props) => {
   return (
     <div className="row">
       <div className="col-sm-4 p-0 left-side">
-        {/* <WeatherWidget /> */}
+        <WeatherWidget />
       </div>
       <div className="row col-sm-8 right-side components">
         <div className="col-sm todo-main">
           <TodoList />
         </div>
         <div className="col-sm football-main">
-          {/* <Football /> */}
+          <Football />
         </div>
       </div>
     </div>

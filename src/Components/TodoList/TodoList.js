@@ -49,17 +49,19 @@ const TodoList = () => {
 
         {(!todos || todos.length === 0)
           ? <p className="text-center mild">No todo items</p>
-          : <ul className="list-group list-group-flush">
-            {todos.map((todo, index) => (
-              <TodoItem
-                key={index}
-                todo={todo}
-                index={index}
-                removeTodo={removeTodo}
-                completeTodo={completeTodo}
-              />
-            ))}
-          </ul>
+          : (
+            <ul className="list-group list-group-flush">
+              {todos.map((todo, index) => (
+                <TodoItem
+                  key={index}
+                  todo={todo}
+                  index={index}
+                  removeTodo={removeTodo}
+                  completeTodo={completeTodo}
+                />
+              ))}
+            </ul>
+          )
         }
       </div>
     </div>
