@@ -5,7 +5,6 @@ import Footer from './Components/Footer';
 import Layout from './Components/Layout';
 
 function App() {
-
   return (
     <Suspense fallback={<BusyIndicator />}>
       <div className="app container-fluid p-0">
