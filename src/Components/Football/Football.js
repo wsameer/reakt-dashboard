@@ -8,7 +8,7 @@ const FOOTBALL_API = {
   url: "https://api.football-data.org/v2/competitions/2021/standings"
 };
 
-// const MCKDATA = dayta;
+const MCKDATA = dayta;
 
 export class Football extends Component {
 
@@ -23,33 +23,33 @@ export class Football extends Component {
   }
 
   componentDidMount() {
-    // this.setState({
-    //   loading: false,
-    //   standings: MCKDATA,
-    //   hasErrors: false
-    // });
+    this.setState({
+      loading: false,
+      standings: MCKDATA,
+      hasErrors: false
+    });
 
     this.calculateCurrentSeason();
 
-    fetch(FOOTBALL_API.url, {
-      method: 'GET',
-      headers: { 'X-Auth-Token': FOOTBALL_API.key }
-    })
-      .then(res => res.json())
-      .then(response => {
-        if (response) {
-          let data = response.standings[0].table;
-          this.setState({
-            loading: false,
-            standings: data,
-            hasErrors: false
-          });
-        }
-      })
-      .catch((err) => {
-        console.log(err);
-        this.setState({ hasErrors: true, loading: false });
-      });
+    // fetch(FOOTBALL_API.url, {
+    //   method: 'GET',
+    //   headers: { 'X-Auth-Token': FOOTBALL_API.key }
+    // })
+    //   .then(res => res.json())
+    //   .then(response => {
+    //     if (response) {
+    //       let data = response.standings[0].table;
+    //       this.setState({
+    //         loading: false,
+    //         standings: data,
+    //         hasErrors: false
+    //       });
+    //     }
+    //   })
+    //   .catch((err) => {
+    //     console.log(err);
+    //     this.setState({ hasErrors: true, loading: false });
+    //   });
   }
 
   clubName = (name) => {
