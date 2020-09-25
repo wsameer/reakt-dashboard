@@ -1,11 +1,10 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 const WeatherWidget = React.lazy(() => import('./WeatherWidget/WeatherWidget'));
 const TodoList = React.lazy(() => import('./TodoList/TodoList'));
 const Football = React.lazy(() => import('./Football/Football'));
 
-const Layout = (props) => {
+const Layout = () => {
   return (
     <div className="row">
       <div className="col-sm-4 p-0 left-side">
@@ -23,8 +22,5 @@ const Layout = (props) => {
   );
 };
 
-Layout.propTypes = {
-
-};
 
 export default Layout;
