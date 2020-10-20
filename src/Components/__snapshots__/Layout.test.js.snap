@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Layout /> should render the Layout component 1`] = `
+<div
+  className="row"
+>
+  <div
+    className="col-sm-4 p-0 left-side"
+  >
+    <lazy />
+  </div>
+  <div
+    className="row col-sm-8 right-side components"
+  >
+    <div
+      className="col-sm todo-main"
+    >
+      <lazy />
+    </div>
+    <div
+      className="col-sm football-main"
+    >
+      <lazy />
+    </div>
+  </div>
+</div>
+`;
