@@ -16,9 +16,7 @@ const TodoList = () => {
       "completedTime": null
     };
 
-    setTodos((prevTodos) => {
-      return prevTodos.length ? [...prevTodos, newItem] : [newItem]
-    });
+    setTodos((prevTodos) => prevTodos.length ? [...prevTodos, newItem] : [newItem]);
   };
 
   const removeTodo = (index) => {
