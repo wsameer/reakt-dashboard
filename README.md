@@ -19,7 +19,7 @@ Build with:
 
 1. Install dependencies
 
-    `npm install`
+    `yarn`
 
 2. Fire up the server and watch files
 
