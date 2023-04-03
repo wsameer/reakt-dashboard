@@ -1,0 +1,38 @@
+/**
+ * VARIABLES
+ */
+
+// Dark
+$cinder: #252b32 !default;
+$black-perl: #1a1f24 !default;
+$nero: #121212 !default;
+
+$grey-one: #e0e0e0 !default;
+$grey-two: #f5f5f5 !default;
+$grey-three: #fafafa !default;
+
+$primary-color: $cinder;
+
+$bg--dark: $nero;
+$bg--2--dark: $cinder;
+$bg--card--dark: $black-perl;
+$text--dark: #fff;
+// $hover--dark:
+// $border--dark:
+
+$bg--light: $grey-one;
+$bg--2--light: $grey-two;
+$bg--card--light: $grey-three;
+$text--light: #000;
+
+// Small tablets and large smartphones (landscape view)
+$screen-sm-min: 576px;
+
+// Small tablets (portrait view)
+$screen-md-min: 768px;
+
+// Tablets and small desktops
+$screen-lg-min: 992px;
+
+// Large tablets and desktops
+$screen-xl-min: 1200px;
