@@ -1,0 +1,18 @@
+{
+	"todos": [
+		{
+			"todo": "Pay the credit card bills",
+			"id": 1,
+			"completed": false,
+			"completedTime": null,
+			"createdTime": 1680576472
+		},
+        {
+			"todo": "Renew the rent agreement",
+			"id": 2,
+			"completed": true,
+			"completedTime": 1680576472,
+			"createdTime": 16805764272
+		}
+	]
+}
