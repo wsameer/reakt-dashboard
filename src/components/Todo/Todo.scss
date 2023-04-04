@@ -1,0 +1,98 @@
+@import '../../assets/scss/index.scss';
+
+.todo-wrapper {
+	border-radius: 20px;
+	border: none;
+
+	.card-body {
+		color: #fff;
+
+		.card-title {
+			color: #fff;
+			letter-spacing: normal;
+			display: inline;
+		}
+
+		.btn-delete {
+			padding: 0 0 10px 0;
+
+			&:active,
+			&:focus {
+				box-shadow: none;
+			}
+
+			img {
+				height: 20px;
+				width: 20px;
+			}
+		}
+
+		.mild {
+			opacity: 0.6;
+		}
+
+		.form-control {
+			color: #fff;
+			background-color: $black-perl;
+			border: 1px solid $nero;
+			border-radius: 8px 0 0 8px;
+			opacity: 0.8;
+			box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12),
+				0 1px 3px rgba(0, 0, 0, 0.24);
+		}
+	}
+}
+
+.input-group-append .btn-outline-secondary {
+	border: 1px solid $nero;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 3px rgba(0, 0, 0, 0.24);
+
+	&:hover {
+		color: #fff;
+		opacity: 1;
+		background-color: $nero;
+	}
+}
+
+.list-group-flush {
+	.list-group-item {
+		background: $black-perl;
+		color: #fff;
+		opacity: 0.87;
+		margin-bottom: 10px;
+		border-radius: 8px;
+		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.24), 0 1px 4px rgba(0, 0, 0, 0.33);
+
+		small {
+			opacity: 0.6;
+		}
+
+		.desc {
+			line-height: normal;
+			width: 90%;
+			text-align: justify;
+		}
+
+		.btn-no-bg {
+			background: transparent;
+			padding: 0.375rem 0;
+
+			&:active,
+			&:focus {
+				outline: none;
+				border: transparent;
+				box-shadow: none;
+			}
+		}
+
+		.form-check {
+			position: absolute;
+			padding-left: 1.25rem;
+		}
+
+		input[type='checkbox'],
+		input[type='radio'] {
+			height: 35px;
+		}
+	}
+}
