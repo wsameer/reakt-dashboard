@@ -6,12 +6,15 @@ import Weather from './components/Weather/Weather';
 import Todo from './components/Todo/Todo';
 import Football from './components/Football/Football';
 import './App.scss';
+import { WeatherProvider } from './components/Weather/useWeather';
 
 const App = () => {
 	return (
 		<Suspense fallback={<BusyIndicator />}>
 			<PageLayout>
-				<Weather />
+				<WeatherProvider>
+					<Weather />
+				</WeatherProvider>
 				<div className="row col-8 right-side components">
 					<Todo />
 					<Football />
