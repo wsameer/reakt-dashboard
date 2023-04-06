@@ -7,7 +7,7 @@ export const calculateCurrentSeason = () => {
 			? `${currentYear}-${(currentYear + 1).toString().substring(2)}`
 			: `${currentYear - 1}-${currentYear.toString().substring(2)}`;
 
-	console.log(`Current season is ${currentSeason}`);
+	// console.log(`Current season is ${currentSeason}`);
 
 	return currentSeason;
 };
