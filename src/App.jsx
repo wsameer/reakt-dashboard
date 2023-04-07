@@ -12,12 +12,14 @@ const App = () => {
 	return (
 		<Suspense fallback={<BusyIndicator />}>
 			<PageLayout>
-				<WeatherProvider>
-					<Weather />
-				</WeatherProvider>
-				<div className="row col-8 right-side components">
-					<Todo />
-					<Football />
+				<div className="row">
+					<div className="col-sm-4 p-0 left-side">
+						<Weather />
+					</div>
+					<div className="row col-8 right-side components">
+						<Todo />
+						<Football />
+					</div>
 				</div>
 			</PageLayout>
 			<Footer />
