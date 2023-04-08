@@ -30,8 +30,7 @@
 			&:focus,
 			&:active {
 				border: 1px solid $nero;
-				box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12),
-					0 1px 2px rgba(0, 0, 0, 0.24);
+				box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 			}
 		}
 	}
@@ -97,6 +96,11 @@
 				font-size: 14px;
 			}
 
+			.weather-details {
+				display: flex;
+				align-items: start;
+			}
+
 			.weather-details img {
 				float: left;
 				margin: 10px 15px;
@@ -106,8 +110,7 @@
 
 			.round-card {
 				border-radius: 20px;
-				box-shadow: 0 1px 3px rgba(0, 0, 0, 0.24),
-					0 1px 4px rgba(0, 0, 0, 0.33);
+				box-shadow: 0 1px 3px rgba(0, 0, 0, 0.24), 0 1px 4px rgba(0, 0, 0, 0.33);
 
 				.capitaliz {
 					text-transform: capitalize;

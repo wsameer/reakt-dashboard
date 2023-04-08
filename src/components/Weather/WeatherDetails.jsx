@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 
 const WeatherDetails = ({ iconPath, title, value }) => (
 	<div className="weather-details p-2">
-		<img src={iconPath} alt={`${title}.png`} />
-		<div>
+		<img src={iconPath} alt="appropriate-logo.png" />
+		<div className="weather-type">
 			<p className="mb-0">{title}</p>
 			<p>{value}</p>
 		</div>

@@ -1,25 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { useWeather } from './useWeather';
 
-const SearchWeather = ({ getWeatherData, isLoading, onQueryChange }) => {
-
-	const [query, setQuery] = useState('');
-
-	/**
-	 * Handles on query change event
-	 * @param {object} event The DOM object
-	 */
-	const onQueryChange = event => {
-		if (!event) {
-			return false;
-		}
-		if (typeof event === 'string') {
-			return setQuery(event);
-		}
-		return setQuery(event.target.value);
-	};
-
+const SearchWeather = ({ query, getWeatherData, isLoading, onQueryChange }) => {
 	const keyPressEvent = event => {
 		event.preventDefault();
 		if (event.keyCode === 13 && query.length > 3) {
@@ -44,6 +26,7 @@ const SearchWeather = ({ getWeatherData, isLoading, onQueryChange }) => {
 };
 
 SearchWeather.propTypes = {
+	query: PropTypes.string.isRequired,
 	getWeatherData: PropTypes.func.isRequired,
 	onQueryChange: PropTypes.func.isRequired,
 	isLoading: PropTypes.bool.isRequired
