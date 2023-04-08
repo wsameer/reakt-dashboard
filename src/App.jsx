@@ -6,7 +6,6 @@ import Weather from './components/Weather/Weather';
 import Todo from './components/Todo/Todo';
 import Football from './components/Football/Football';
 import './App.scss';
-import { WeatherProvider } from './components/Weather/useWeather';
 
 const App = () => {
 	return (
