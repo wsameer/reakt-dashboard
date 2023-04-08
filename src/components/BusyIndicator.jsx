@@ -1,5 +1,3 @@
-import React from 'react';
-
 const BusyIndicator = () => {
 	return (
 		<div className="d-flex justify-content-center mt-4 pt-5">

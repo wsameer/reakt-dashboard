@@ -37,3 +37,23 @@ export const convertToLocalTime = timeStamp => {
 		hour12: true
 	});
 };
+
+export const convertTime = t => {
+	const d = new Date(t);
+	console.log(d);
+	let months = [
+		'Jan',
+		'Feb',
+		'Mar',
+		'Apr',
+		'May',
+		'Jun',
+		'Jul',
+		'Aug',
+		'Sep',
+		'Oct',
+		'Nov',
+		'Dec'
+	];
+	return `${d.getDate()} ${months[d.getMonth()]}, ${d.getFullYear()}`;
+};

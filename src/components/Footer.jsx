@@ -1,5 +1,3 @@
-import React from 'react';
-
 const Footer = () => {
 	return (
 		<footer className="mt-5 text-muted">
@@ -14,10 +12,7 @@ const Footer = () => {
 				</p>
 				<p>
 					This React dashboard project is a ©{' '}
-					<a
-						href="https://github.com/wsameer"
-						rel="noopener noreferrer"
-						target="_blank">
+					<a href="https://github.com/wsameer" rel="noopener noreferrer" target="_blank">
 						Sameer Waskar
 					</a>
 					, but please fork a branch and customize it for yourself!

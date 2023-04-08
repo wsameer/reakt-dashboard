@@ -31,14 +31,8 @@ const Football = () => {
 			<div className="card p-0">
 				<div className="football-container scrollbar" id="style-1">
 					<div className="card-body">
-						<h5 className="pl-2 card-title text-center">
-							Premier League ({season})
-						</h5>
-						{loading ? (
-							<BusyIndicator />
-						) : (
-							<LeagueTable standings={standings} />
-						)}
+						<h5 className="pl-2 card-title text-center">Premier League ({season})</h5>
+						{loading ? <BusyIndicator /> : <LeagueTable standings={standings} />}
 					</div>
 				</div>
 			</div>
