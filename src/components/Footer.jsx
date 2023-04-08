@@ -1,6 +1,6 @@
 const Footer = () => {
 	return (
-		<footer className="mt-5 text-muted">
+		<footer className="text-muted">
 			<div className="container">
 				<p className="float-right">
 					<a

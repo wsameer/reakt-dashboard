@@ -176,7 +176,7 @@ const Weather = () => {
 									</div>
 								</div>
 
-								<div className="col-sm mt-4 text-center">
+								<div className="col-sm mt-5 text-center">
 									<div className="card round-card">
 										<div className="card-body">
 											<span className="capitaliz">

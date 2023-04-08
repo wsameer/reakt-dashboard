@@ -50,7 +50,7 @@ const Todo = () => {
 	}, [t]);
 
 	return (
-		<div className="card todo-wrapper mr-4">
+		<div className="card col todo-wrapper mr-4">
 			<div className="card-body">
 				<h5 className="card-title mb-3">Todays Tasks</h5>
 
