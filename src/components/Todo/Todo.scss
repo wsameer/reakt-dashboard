@@ -15,6 +15,7 @@
 
 		.btn-delete {
 			padding: 0 0 10px 0;
+			background-color: transparent;
 
 			&:active,
 			&:focus {
@@ -37,8 +38,7 @@
 			border: 1px solid $nero;
 			border-radius: 8px 0 0 8px;
 			opacity: 0.8;
-			box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12),
-				0 1px 3px rgba(0, 0, 0, 0.24);
+			box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 3px rgba(0, 0, 0, 0.24);
 		}
 	}
 }
@@ -56,6 +56,7 @@
 
 .list-group-flush {
 	.list-group-item {
+		padding: 10px;
 		background: $black-perl;
 		color: #fff;
 		opacity: 0.87;
@@ -70,7 +71,7 @@
 		.desc {
 			line-height: normal;
 			width: 90%;
-			text-align: justify;
+			text-align: left;
 		}
 
 		.btn-no-bg {
@@ -82,6 +83,10 @@
 				outline: none;
 				border: transparent;
 				box-shadow: none;
+			}
+
+			&:hover {
+				border: 1px solid transparent;
 			}
 		}
 
