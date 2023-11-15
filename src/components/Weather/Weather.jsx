@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import SearchWeather from './SearchWeather';
 import './Weather.scss';
 import BusyIndicator from '../common/BusyIndicator';
@@ -49,20 +49,20 @@ const Weather = () => {
 				return handleApiError('No record found');
 			}
 
-			setIsLoading(false);
-			setQuery('');
-			setWeatherData(mockData);
+			// setIsLoading(false);
+			// setQuery('');
+			// setWeatherData(mockData);
 
-			// fetch(`${WEATHER_API.base}?id=${findCity.id}&units=metric&appid=${WEATHER_API.key}`)
-			// 	.then(res => res.json())
-			// 	.then(result => {
-			// 		setIsLoading(false);
-			// 		if (result.cod !== 200) {
-			// 			return handleApiError(result.message);
-			// 		}
-			// 		setQuery('');
-			// 		setWeatherData(result);
-			// 	});
+			fetch(`${WEATHER_API.base}?id=${findCity.id}&units=metric&appid=${WEATHER_API.key}`)
+				.then(res => res.json())
+				.then(result => {
+					setIsLoading(false);
+					if (result.cod !== 200) {
+						return handleApiError(result.message);
+					}
+					setQuery('');
+					setWeatherData(result);
+				});
 		},
 		[query, setIsLoading, setWeatherData, CityData]
 	);

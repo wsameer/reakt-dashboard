@@ -40,7 +40,6 @@ export const convertToLocalTime = timeStamp => {
 
 export const convertTime = t => {
 	const d = new Date(t);
-	console.log(d);
 	let months = [
 		'Jan',
 		'Feb',

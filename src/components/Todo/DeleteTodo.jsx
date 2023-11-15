@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import DELETE_ICON from '../../assets/images/icons8-delete.svg';
 
 const DeleteTodo = ({ deleteAllTodos }) => {
-	console.log(`DeleteTodo is created`);
 	return (
 		<button title="delete all" className="btn btn-delete float-right" onClick={deleteAllTodos}>
 			<img src={DELETE_ICON} alt="" />
