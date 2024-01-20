@@ -1,13 +1,6 @@
 import PropTypes from 'prop-types';
 
-const SearchWeather = ({ query, getWeatherData, isLoading, onQueryChange }) => {
-	const keyPressEvent = event => {
-		event.preventDefault();
-		if (event.keyCode === 13 && query.length > 3) {
-			getWeatherData();
-		}
-	};
-
+const SearchWeather = ({ isLoading, cityName }) => {
 	return (
 		<div className="form-group search-box">
 			<input
@@ -16,18 +9,14 @@ const SearchWeather = ({ query, getWeatherData, isLoading, onQueryChange }) => {
 				className="form-control form-control-lg"
 				placeholder="Search for a city..."
 				aria-describedby="emailHelp"
-				onChange={onQueryChange}
-				value={query}
-				onKeyUp={keyPressEvent}
+				value={cityName}
 			/>
 		</div>
 	);
 };
 
 SearchWeather.propTypes = {
-	query: PropTypes.string.isRequired,
-	getWeatherData: PropTypes.func.isRequired,
-	onQueryChange: PropTypes.func.isRequired,
+	cityName: PropTypes.string.isRequired,
 	isLoading: PropTypes.bool.isRequired
 };
 

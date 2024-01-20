@@ -4,8 +4,8 @@
 	padding: 25px;
 	border-radius: 20px;
 	margin-bottom: 30px;
-	background-color: $black-perl;
-	color: #fff !important;
+	background-color: $black-perl-lite;
+	color: #fff;
 	min-height: 700px;
 
 	@include md {
@@ -33,6 +33,14 @@
 				box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 			}
 		}
+	}
+
+	.full-page {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 300px;
+		height: 600px;
 	}
 
 	.card {
@@ -88,6 +96,10 @@
 				}
 			}
 
+			.justify-content-end {
+				justify-content: end;
+			}
+
 			.f-med {
 				font-size: 18px;
 			}
@@ -99,6 +111,7 @@
 			.weather-details {
 				display: flex;
 				align-items: start;
+				justify-content: center;
 			}
 
 			.weather-details img {
