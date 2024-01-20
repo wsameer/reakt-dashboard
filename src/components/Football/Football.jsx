@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { calculateCurrentSeason } from './formatter';
-import BusyIndicator from '../BusyIndicator';
+import BusyIndicator from '../common/BusyIndicator';
 import './Football.scss';
 import { data } from './mockData.json';
 import LeagueTable from './LeagueTable';

@@ -1,6 +1,6 @@
 import { Suspense } from 'react';
 
-import BusyIndicator from './components/BusyIndicator';
+import BusyIndicator from './components/common/BusyIndicator';
 import Football from './components/Football/Football';
 import Footer from './components/Footer';
 import Todo from './components/Todo/Todo';
