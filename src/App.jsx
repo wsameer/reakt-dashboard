@@ -1,11 +1,13 @@
 import { Suspense } from 'react';
-import './App.scss';
+
 import BusyIndicator from './components/BusyIndicator';
 import Football from './components/Football/Football';
 import Footer from './components/Footer';
 import Todo from './components/Todo/Todo';
 import Weather from './components/Weather/Weather';
 import PageLayout from './components/layout/PageLayout';
+
+import './App.scss';
 
 const App = () => {
 	return (

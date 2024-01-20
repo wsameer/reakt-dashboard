@@ -31,4 +31,6 @@ SearchWeather.propTypes = {
 	isLoading: PropTypes.bool.isRequired
 };
 
+SearchWeather.displayName = 'SearchWeather';
+
 export default SearchWeather;

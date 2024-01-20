@@ -39,7 +39,6 @@ const Todo = () => {
 	};
 
 	useEffect(() => {
-		console.log(t);
 		const lastTodoId = t?.reduce((acc, current) => {
 			if (current?.id > acc?.id) {
 				return current.id;

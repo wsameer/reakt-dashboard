@@ -3,10 +3,7 @@ const Footer = () => {
 		<footer className="text-muted">
 			<div className="container">
 				<p className="float-right">
-					<a
-						href="https://www.linkedin.com/in/wsameer/"
-						rel="noopener noreferrer"
-						target="_blank">
+					<a href="https://www.linkedin.com/in/wsameer/" rel="noopener noreferrer" target="_blank">
 						Follow me on Linkedin
 					</a>
 				</p>
