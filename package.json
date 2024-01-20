@@ -9,11 +9,12 @@
 		"preview": "vite preview",
 		"lint": "eslint src/**/*.{js,jsx}",
 		"lint:fix": "eslint --fix src/**/*.{js,jsx}",
-		"format": "prettier --write src/**/*.{js,jsx,json,scss,md} --config ./.prettierrc"
+		"format": "prettier --write src/**/*.{js,jsx,json,scss} --config ./.prettierrc"
 	},
 	"dependencies": {
 		"react": "^18.2.0",
-		"react-dom": "^18.2.0"
+		"react-dom": "^18.2.0",
+		"swr": "^2.2.4"
 	},
 	"devDependencies": {
 		"@babel/eslint-parser": "^7.21.3",
