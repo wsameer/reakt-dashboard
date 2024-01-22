@@ -46,7 +46,7 @@ const Todo = () => {
 			return acc?.id;
 		});
 		setLastTodoId(lastTodoId);
-	}, [t]);
+	}, []);
 
 	return (
 		<div className="card col todo-wrapper mr-4">

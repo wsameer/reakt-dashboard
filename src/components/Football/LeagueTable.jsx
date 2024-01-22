@@ -18,7 +18,7 @@ const LeagueTable = ({ standings }) => {
 				</tr>
 			</thead>
 			<tbody>
-				{standings.map((club, index) => (
+				{standings.map(club => (
 					<TableRow key={club.position} club={club} />
 				))}
 			</tbody>

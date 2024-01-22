@@ -19,11 +19,7 @@ const Weather = React.memo(() => {
 	const findCity =
 		cityName && CityData?.find(city => city.name.toLowerCase() === cityName.toLowerCase());
 
-	const {
-		data: weatherData,
-		error,
-		isLoading
-	} = useSWR(
+	const { data: weatherData, isLoading } = useSWR(
 		() =>
 			cityName
 				? `${WEATHER_API.base}?id=${findCity.id}&units=metric&appid=${WEATHER_API.key}`
@@ -60,7 +56,7 @@ const Weather = React.memo(() => {
 				}
 			]);
 		}
-	}, [weatherData, WEATHER_ICONS]);
+	}, [weatherData]);
 
 	if (isLocationLoading || isLoading) {
 		return (

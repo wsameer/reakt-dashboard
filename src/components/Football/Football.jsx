@@ -24,7 +24,7 @@ const Football = () => {
 
 		setStandings(data);
 		setLoading(false);
-	}, [data]);
+	}, []);
 
 	return (
 		<div className="col football-main">
