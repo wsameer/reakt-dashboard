@@ -101,7 +101,7 @@ const Weather = React.memo(() => {
 							<div className="weather f-med mb-4">
 								<img
 									className="mr-1"
-									src={`http://openweathermap.org/img/wn/${weatherData?.weather[0].icon}.png`}
+									src={`https://openweathermap.org/img/wn/${weatherData?.weather[0].icon}.png`}
 									height="42px"
 									alt=""
 								/>
