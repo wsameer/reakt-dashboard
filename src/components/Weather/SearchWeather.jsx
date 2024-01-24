@@ -1,6 +1,12 @@
 import PropTypes from 'prop-types';
 
 const SearchWeather = ({ isLoading, cityName }) => {
+	const keyPressEvent = event => {
+		event.preventDefault();
+		if (event.keyCode === 13) {
+			// mutate
+		}
+	};
 	return (
 		<div className="form-group search-box">
 			<input
@@ -9,6 +15,7 @@ const SearchWeather = ({ isLoading, cityName }) => {
 				className="form-control form-control-lg"
 				placeholder="Search for a city..."
 				aria-describedby="emailHelp"
+				onKeyUp={keyPressEvent}
 				value={cityName}
 			/>
 		</div>

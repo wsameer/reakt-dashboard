@@ -18,7 +18,9 @@ const Todo = () => {
 			id: lastTodoId + 1
 		};
 
-		setTodos(prevTodos => (prevTodos.length ? [...prevTodos, newItem] : [newItem]));
+		setTodos(prevTodos =>
+			prevTodos.length ? [...prevTodos, newItem] : [newItem]
+		);
 	};
 
 	const removeTodo = index => {

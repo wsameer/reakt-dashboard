@@ -16,10 +16,14 @@ const TodoItem = ({ todo, index, completeTodo, removeTodo }) => {
 				/>
 			</div>
 			<div className="pl-4">
-				<button className="float-right btn btn-no-bg" onClick={() => removeTodo(index)}>
+				<button
+					className="float-right btn btn-no-bg"
+					onClick={() => removeTodo(index)}>
 					<img src={DELETE_ICON} alt="Delete Todo" width="14" />
 				</button>
-				<p className="desc m-0" style={{ textDecoration: todo.completed ? 'line-through' : '' }}>
+				<p
+					className="desc m-0"
+					style={{ textDecoration: todo.completed ? 'line-through' : '' }}>
 					{todo.title}
 				</p>
 				<small>{convertTime(todo.createdTime)}</small>
