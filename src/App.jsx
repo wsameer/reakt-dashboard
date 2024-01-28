@@ -14,7 +14,7 @@ const App = () => {
 		<Suspense fallback={<BusyIndicator />}>
 			<PageLayout>
 				<div className="row">
-					<div className="col-sm-4 p-0 left-side">
+					<div className="col-md-4 p-0 left-side">
 						<Weather />
 					</div>
 					<div className="row col-8 right-side components">
