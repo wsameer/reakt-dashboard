@@ -1,30 +1,21 @@
-import PropTypes from 'prop-types';
+import { useState } from 'react';
 
-const SearchWeather = ({ isLoading, cityName }) => {
-	const keyPressEvent = event => {
-		event.preventDefault();
-		if (event.keyCode === 13) {
-			// mutate
-		}
-	};
+const SearchWeather = ({ cityName }) => {
+	const [city, setCity] = useState(cityName);
+
 	return (
 		<div className="form-group search-box">
 			<input
-				disabled={isLoading}
 				type="text"
+				value={city}
 				className="form-control form-control-lg"
-				placeholder="Search for a city..."
-				aria-describedby="emailHelp"
-				onKeyUp={keyPressEvent}
-				value={cityName}
+				placeholder="Search for a city"
+				aria-describedby="cityHelp"
+				onChange={e => setCity(e.target.value)}
+				disabled
 			/>
 		</div>
 	);
-};
-
-SearchWeather.propTypes = {
-	cityName: PropTypes.string.isRequired,
-	isLoading: PropTypes.bool.isRequired
 };
 
 SearchWeather.displayName = 'SearchWeather';
